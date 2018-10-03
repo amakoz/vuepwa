@@ -1,0 +1,27 @@
+{
+  "short_name": "HS",
+  "name": "HighsSolutions",
+  "icons": [
+    {
+      "src": "/images/pwa/icon-96-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/images/pwa/icon-256-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/images/pwa/icon-512-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000",
+  "orientation": "portrait"
+}
