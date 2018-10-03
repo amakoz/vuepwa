@@ -48,6 +48,10 @@
 @import "offer";
 @import "offer-form";
 
+*:not(input) {
+  user-select: none;
+}
+
 button {
   &:focus, &:active {
     outline: none;
