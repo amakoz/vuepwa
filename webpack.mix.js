@@ -9,9 +9,9 @@ mix.webpackConfig({
         new SWPrecacheWebpackPlugin({
             cacheId: 'pwa',
             filename: 'service-worker.js',
-            staticFileGlobs: ['public/**/*.{css,eot,svg,ttf,woff,woff2,js,html}'],
+            staticFileGlobs: ['public_html/**/*.{css,eot,svg,ttf,woff,woff2,js,html}'],
             minify: true,
-            stripPrefix: 'public/',
+            stripPrefix: 'public_html/',
             handleFetch: true,
             dynamicUrlToDependencies: { //you should add the path to your blade files here so they can be cached
                 //and have full support for offline first (example below)
@@ -35,12 +35,12 @@ mix.webpackConfig({
     ]
 });
 
-mix.js('resources/assets/js/app.js', 'public/js')
+mix.js('resources/assets/js/app.js', 'public_html/js')
 	.version()
-	.setPublicPath('public');
+	.setPublicPath('public_html');
 
 
-mix.sass('resources/assets/sass/app.scss', 'public/css')
+mix.sass('resources/assets/sass/app.scss', 'public_html/css')
 	.options({
 		processCssUrls: false,
 		postCss: [tailwindcss('./tailwind.js')],
@@ -48,7 +48,7 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
 
 mix.webpackConfig({
 	output: {
-		path: path.resolve(__dirname, 'public')
+		path: path.resolve(__dirname, 'public_html')
 	},
 	module: {
 		rules: [
